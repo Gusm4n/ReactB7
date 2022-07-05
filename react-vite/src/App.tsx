@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import { Photo } from "./components/Photo";
 
 const App = () => {
   let link: string = 'https://google.com.br';
@@ -8,6 +9,8 @@ const App = () => {
       <Header title="Exemplito" />
       Link para o site <br/>
       <a href={link}>Clique aqui!</a>
+
+      <Photo url="https://www.google.com.br/google.jpg"/>
     </div>
   );
 }
