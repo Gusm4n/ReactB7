@@ -1,9 +1,12 @@
 const App = () => {
-  return(
+  let link: string = 'https://google.com.br';
+
+  return (
     <div>
-      Hello world... Again!
+      Link para o site <br/>
+      <a href={link}>Clique aqui!</a>
     </div>
-  )
+  );
 }
 
 export default App;
