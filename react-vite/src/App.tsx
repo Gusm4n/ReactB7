@@ -5,7 +5,7 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header title="Exemplito" />
       Link para o site <br/>
       <a href={link}>Clique aqui!</a>
     </div>
