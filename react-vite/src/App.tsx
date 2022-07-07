@@ -1,22 +1,27 @@
 import { useState } from "react";
 
 const App = () => {
+  const [numero, setNumero] = useState(0)
 
-const [numero, setNumero] = useState(0)
-const [name, setName] = useState('Felipe')
-
-  const handleButtonClick = () => {
-    alert('O botão foi clicado! :D')
+  const handleMinus = () => {
+    if(numero < 1){
+      return 0
+    }
+    else{
+      setNumero(numero - 1)
+    }
   }
 
-  const handleName = () => {
-    setName('Felipe Gusmão')
+  const handlePlus = () => {
+    setNumero(numero + 1)
   }
 
   return (
-    <div>
-      Meu nome é: {name}.
-      <button onClick={ handleName }>Clique aqui!</button>
+    <div> 
+      <button onClick={handleMinus}>-</button>
+      <div>{numero}</div>
+      <button onClick={handlePlus}>+</button>
+
     </div>
   );
 }
