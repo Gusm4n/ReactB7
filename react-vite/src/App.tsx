@@ -1,27 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const App = () => {
-  const [numero, setNumero] = useState(0)
+  const [name, setName] = useState('')
 
-  const handleMinus = () => {
-    if(numero < 1){
-      return 0
-    }
-    else{
-      setNumero(numero - 1)
-    }
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName( event.target.value )
   }
-
-  const handlePlus = () => {
-    setNumero(numero + 1)
-  }
-
   return (
     <div> 
-      <button onClick={handleMinus}>-</button>
-      <div>{numero}</div>
-      <button onClick={handlePlus}>+</button>
-
+      <input type="text" value={name} onChange={handleInput}/>
+      <hr/>
+      Seu nome é: { name }
     </div>
   );
 }
