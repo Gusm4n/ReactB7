@@ -1,16 +1,15 @@
 import React, { useState } from "react";
+import { Botao } from "./components/Botao";
 
 const App = () => {
-  const [name, setName] = useState('')
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName( event.target.value )
+  const botaoEvento = () => {
+    alert("Frase do app!")
   }
+
   return (
     <div> 
-      <input type="text" value={name} onChange={handleInput}/>
-      <hr/>
-      Seu nome é: { name }
+      <Botao text="Clique no botão!" clickFn={botaoEvento}/>
     </div>
   );
 }
