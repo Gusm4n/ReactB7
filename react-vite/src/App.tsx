@@ -1,15 +1,23 @@
 import React, { useState } from "react";
-import { Botao } from "./components/Botao";
 
 const App = () => {
 
-  const botaoEvento = () => {
-    alert("Frase do app!")
-  }
+  let list = [
+    'A3',
+    'A4',
+    'A5',
+    'Q3',
+    'TT'
+  ]
 
   return (
     <div> 
-      <Botao text="Clique no botão!" clickFn={botaoEvento}/>
+      <h2>Lista de carros nacionais da AUDI</h2>
+      <ul>
+        {list.map((item, index)=>(
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
