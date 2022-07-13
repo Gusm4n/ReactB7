@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { Botao } from "./components/Botao";
-
 const App = () => {
 
-  }
 
-  return (
+  return(
     <div> 
-      <Botao />
+      
     </div>
     
   );
+  
+
 }
+
 
 export default App;
